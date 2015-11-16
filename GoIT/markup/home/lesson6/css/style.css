@@ -40,7 +40,7 @@ header {
 
 .tel span{
 	font-family: arial;
-	color: #114165;
+	color: #5e696d;
 	font-size: 18px;
 	letter-spacing: 0.4px;
 	line-height: 31px;
@@ -124,13 +124,14 @@ header {
     outline: none;
     border: none;
     padding: 0;
+    text-decoration: none;
  }
 
 .enter:hover {
 	text-decoration: underline;
 }
 
-.form a {
+.form a:last-child {
 	float: right;
 	color: #bfbfbf;
 	font-size: 12px;
@@ -542,15 +543,22 @@ header nav a:first-child {
 
 .brand .form_wheels div, 
 .brand .form_tires div  {
-	padding: 3px 0 3px 22px;
+	padding: 6px 0 3px 22px;
 }
-
+.brand .checkbox_brend {
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	border: 1px solid #114165;
+	margin-top: 3px;
+}
 .brand label{
 	position: relative;
 	color: #465961;
 	font-size: 13px;
 	text-decoration: none;
 	letter-spacing: -0.2px;
+	padding: 2px 0 0 5px;
 }
 
 .brand .form_tires {
@@ -571,6 +579,7 @@ header nav a:first-child {
 	font-size: 11px;
 	font-weight: 400;
 	text-transform: uppercase;
+	box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75);
 }
 
 
