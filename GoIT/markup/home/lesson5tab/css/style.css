@@ -1,8 +1,6 @@
 
 table {
 	border-collapse: collapse;
-	width: 500px;
-	height: 540px;
 	margin: auto;
 	border: 11px solid white;
 	
@@ -30,5 +28,29 @@ td{
 .blue {
 	background: #255e9f;
 }
+
+.w2 {
+	width:96px; 
+}
+.w3	{
+	width: 144px;
+}
+.w4 {
+	width: 192px;
+}
+.w6 {
+	width: 288px;
+}
+
+.h2 {
+	height: 96px;
+}
+.h3 {
+	height: 144px;
+}
+.h4 {
+	height: 192px;
+}
+
 
 
