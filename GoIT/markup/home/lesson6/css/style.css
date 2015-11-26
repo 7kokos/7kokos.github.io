@@ -1,5 +1,5 @@
 body {
-	font-family: "Lucida Sans Unicode";
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	
 }
 
@@ -39,7 +39,7 @@ header {
 }
 
 .tel span{
-	font-family: arial;
+	font-family: "arial", "Helvetica CY", sans-serif;
 	color: #5e696d;
 	font-size: 18px;
 	letter-spacing: 0.4px;
@@ -650,7 +650,7 @@ footer p {
 	margin: 10px auto; 
 	width: 154px;
 	color: #7f4740;
-	font-family: Arial;
+	font-family: "Arial", "Helvetica CY", sans-serif;
 	font-size: 10px;
 	line-height: 18px;
 }
