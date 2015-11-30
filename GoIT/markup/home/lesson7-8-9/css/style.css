@@ -1094,6 +1094,9 @@ body {
 	margin: 12px auto;
 }
 
+.about-item:first-child {
+    margin-left: 0;
+}
 .about-item:last-child {
 	margin-top: 29px;
 }
