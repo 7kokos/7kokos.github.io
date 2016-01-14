@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HW-js-9-10</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="css/cusel.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.jcarousel.js"></script>
+	<script src="js/jcarousel.basic.js"></script>
+	
+	<script type="text/javascript" src="js/jquery-migrate-1.1.1.min.js"></script>
+	
+	<script src="js/jScrollPane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/cusel.js"></script>
+	<script src="js/script.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		 <ul class="menu">
+        <li><a href="#">List Item #1 &#9660</a>
+            <ul class="drop">
+                <li><a href="#">List Item #1.1</a></li>
+                <li><a href="#">List Item #1.2</a></li>
+                <li>
+                    <a href="#">List Item #1.3 &#9658</a>
+                    <ul>
+                        <li><a href="#">List Item #1.3.1</a></li>
+                        <li>
+                            <a href="#">List Item #1.3.2 &#9658</a>
+                            <ul>
+                                <li><a href="#">List Item #1.3.2.1</a></li>
+                                <li><a href="#">List Item #1.3.2.2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">List Item #1.4</a></li>
+                <li><a href="#">List Item #1.5</a></li>
+            </ul>
+        </li>
+    
+    
+        <li><a href="#">List Item #2</a></li>
+
+        <li><a href="#">List Item #3 &#9660</a>
+            <ul class="drop">
+                <li><a href="#">List Item #3.1</a></li>
+                <li><a href="#">List Item #3.2</a></li>
+                <li><a href="#">List Item #3.3</a></li>
+                <li><a href="#">List Item #3.4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">List Item #4 &#9660</a>
+            <ul class="drop">
+                <li><a href="#">List Item #4.1</a></li>
+                <li><a href="#">List Item #4.2</a></li>
+                <li><a href="#">List Item #4.3</a></li>
+                <li><a href="#">List Item #4.4</a></li>
+            </ul>
+        </li>
+       
+		
+
+    </ul>
+	</div>
+	<div class="container">
+	<h1 class="text-center">cats</h1>
+		
+		<div class="jcarousel-wrapper">
+			
+			<div class="jcarousel ">
+				<ul>
+					<li ><img src="img/cat1.jpg" alt=""></li>
+					<li ><img src="img/cat2.jpg" alt=""></li>
+					<li ><img src="img/cat3.jpg" alt=""></li>
+					<li ><img src="img/cat4.jpg" alt=""></li>
+					<li ><img src="img/cat5.jpg" alt=""></li>
+
+				</ul>
+		   </div>
+				<a href="" class="jcarousel-control-prev">&lsaquo;</a>
+            	<a href="" class="jcarousel-control-next">&rsaquo;</a>
+            	<p class="jcarousel-pagination"></p>
+		</div>
+	
+		<form>
+			<div class="lineForm">
+			
+				
+					<select name="" >
+					<option selected="selected" value="">Выбери себе кота</option>
+						<option value="">кот 1</option>
+						<option value="">кот 2</option>
+						<option value="">кот 3</option>
+						<option value="">кот 4</option>
+						<option value="">кот 5</option>
+						<option value="">кот 6</option>
+						<option value="">кот 7</option>
+						<option value="">кот 8</option>
+						<option value="">кот 9</option>
+						<option value="">кот 10</option>
+					</select>
+				
+			</div>
+			<div class="checkbox-css">Cделано на CSS</div>
+			<div class="squaredFour">
+				<input type="checkbox" value="None" id="squaredFour1" name="check" checked />
+      			<label for="squaredFour1"><span>Рыжий</span></label>
+    		</div>
+    		<div class="squaredFour">	
+      			<input type="checkbox" value="None" id="squaredFour2" name="check"/>
+      			<label for="squaredFour2"><span>Черный</span></label>
+      		</div>
+      		<div class="squaredFour">
+      			<input type="checkbox" value="None" id="squaredFour3" name="check"/>
+      			<label for="squaredFour3"><span>Белый</span></label>
+      		</div>
+			
+
+			<div class="checkbox-jQuery">Cделано на jQuery</div>
+			<div class="cb">
+				<input type="checkbox" class="niceCheck" id="ch1" tabindex="1" /> 
+				<label for="ch1">Бурый</label>
+			</div>
+			<div class="cb">
+				<input type="checkbox" class="niceCheck" checked="checked" id="ch2" tabindex="2" value="2" />
+				<label for="ch2">Серый</label>
+			</div>
+			<div class="cb">
+				<input type="checkbox" class="niceCheck" id="ch3" checked="checked" disabled="disabled" />
+				<label for="ch3">Пепельный</label>
+			</div>
+			<button>Купить</button>
+
+		</form>
+	</div>
+
+		
+	
+
+</body>
+</html>
+
+
