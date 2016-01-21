@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HW-12-js</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/tmpl.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	
+	<div class="container">
+		<button class="btn btn-lg btn-default viewAll">Добавить всех котиков!</button>
+		<button class="btn btn-lg btn-default viewOne">Добавить одного котика!</button>
+	</div>
+	<div class="container content"></div>
+	
+<script type="text/html" id = "cardCatAll">
+	<% for (var i =0; i<data.length; i++) { %>
+	<section>
+			<h3 class="text-center"> <%=data[i].catName%> </h3>
+			<img src="img/<%=data[i].catName%>.jpg" alt="" class="img-circle text-center">
+			<p class="text-center description"><%=data[i].description%></p>
+	</section>
+<%}; %>  
+</script>
+
+<script type="text/html" id = "cardCatOne">
+	<section>
+			<% var k = (Math.round(0.5 + Math.random() * data.length))-1; 
+			console.log(k);	%>	
+			<h3 class="text-center"> <%=data[k].catName%> </h3>
+			<img src="img/<%=data[k].catName%>.jpg" alt="" class="img-circle text-center">
+			<p class="text-center description"><%=data[k].description%></p>
+	</section>
+</script>
+ 
+
+</body>
+</html>
+
+

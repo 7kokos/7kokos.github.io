@@ -1,0 +1,31 @@
+section {
+display: inline-block;
+vertical-align: top;
+margin: 30px;
+}
+
+section .img-circle {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 100px;
+}
+
+section .description {
+	width: 200px;
+	margin: 20px auto;
+}
+
+.viewAll {
+	position: fixed;
+	top:1%;
+	left:30px;
+}
+
+.viewOne {
+	position: fixed;
+	top:1%;
+	left:280px;
+
+}
+
