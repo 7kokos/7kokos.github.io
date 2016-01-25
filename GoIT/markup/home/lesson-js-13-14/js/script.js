@@ -81,29 +81,30 @@ function checkAnswer(e) {
     
     
     var user = [];
-    var userAnswered = {};
     
     for (var i = 0; i < questions.length; i++) {
         // галка
    		var inputs = $('.box' + i +' input:checkbox');
    		   		
-   	for (var k = 0; k < inputs.length; k++) { 
-        var checked = inputs[k].checked;
+    	var userAnswered = {};
+   			for (var k = 0; k < inputs.length; k++) { 
+     		   var checked = inputs[k].checked;
     //     // является ли вариант правильным
        
-        var right = questions[i].rightAnswer[k+1] == true;
+       		 var right = questions[i].rightAnswer[k+1] == true;
         
         // если отметка не является правильной
-        if (checked !== right) {
-        	userAnswered[k]=false;
-            error = true;
+       		 if (checked !== right) {
+       		 	userAnswered[k]=false;
+       		     error = true;
                 
-        } else {
-        	userAnswered[k]=true;
-        };
-	};
+       		 } else {
+        		userAnswered[k]=true;
+        		};
+		};
+		
         user.push(userAnswered);
-        var userAnswered = {};
+        // var userAnswered = {};
    		
 	};
         
