@@ -1,27 +1,81 @@
 'use strict';
 
 $(function () {
-	
-        
-    $('#f').submit(function(){
-        var query = encodeURIComponent($('#q').val());	     	
-        var urlFull = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=large&q='+ query + '&callback=GoogleCallback&context=?';
-           
-        $.ajax({
-            url: urlFull,
-            dataType : "jsonp"
-       	});
-       	return false;
-    });
     
-});
+		$('.pagination').hide();
+
+	    $('#f').submit(function(e){
+	    	
+	        e.preventDefault();
+			
+	        function googleSearch (i) {
+    			$('.results').html('');
+	        	var query = encodeURIComponent($('#q').val());	  
+	        	var urlFullFistPart = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=5&start='+ (i*5*2) +'&q='+ query + '&callback=GoogleCallbackFirstPart&context=?';
+	        	var urlFullSecondPart = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=5&start='+ ((i*5*2)+5) +'&q='+ query + '&callback=GoogleCallbackSecondPart&context=?';
+	           
+	       		$.ajax({
+	            	url: urlFullFistPart,
+	            	dataType : "jsonp"
+	       		});
+
+	       		$.ajax({
+	          	  url: urlFullSecondPart,
+	          	  dataType : "jsonp"
+	       		});
+	        	
+    			setTimeout(function() {
+					$('.pagination').show();
+    			
+    			},1000);
+	        };
+	       	
+			$('.pagination li a').unbind('click');
+				
+			$('.pagination li a').on('click', function (e) {
+				
+				e.preventDefault();
+				var k = $(this).parent().index();
+	    		// console.log('k', k);
+	    		googleSearch(k);
+
+			});
+
+    		googleSearch(0);
+
+    		
+	    });
+
+	}   
+	
+	
+);
+
  
-function GoogleCallback (func, data) {
+function GoogleCallbackFirstPart (func, data) {
+	// console.log(data)
 	var htmlResult = $('#resultsGenerate').html();
     var content = tmpl(htmlResult, data);
-	$('.results').html('').append(content);
+	$('.results').append(content);
     
 };
+
+function GoogleCallbackSecondPart (func, data) {
+	setTimeout(function() {
+		// console.log(data);
+		var htmlResult = $('#resultsGenerate').html();
+	    var content = tmpl(htmlResult, data);
+		$('.results').append(content);
+
+	},100);
+    
+};
+
+
+
+
+
+
 
 
 // __PROTO__
