@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HW-js-19-20</title>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="dest/css/style.min.css">	
+	<script src="https://cdn.jsdelivr.net/lodash/4.5.0/lodash.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="dest\js\build\production.min.js"></script>
+
+</head>
+<body>
+	<header class="header"> 
+		<div class="wrapper">
+			<div class="top clearfix">
+			    
+				<div class="logo">				
+					<a href="#" class="logo-link">
+						<img class="logo-link__img" src="dest/img/logotype.png" alt="logo">
+					</a>
+					<h1 class="logo-head">
+						<a class="logo-head__link" href="#">Build Home</a>
+					</h1>
+					<h2 class="logo-theme">
+						<a class="logo-theme__link" href="#">industrial theme</a>
+					</h2>
+				</div>
+				
+				<div class="social-networks">
+					<ul class="social-networks-list">
+						<li class="social-networks-list-item"><a href="#" class=" social-networks-list-item__link  icon-facebook"></a></li>
+						<li class="social-networks-list-item"><a href="#" class=" social-networks-list-item__link icon-twitter"></a></li>
+						<li class="social-networks-list-item"><a href="#" class=" social-networks-list-item__link icon-rss"></a></li>
+						<li class="social-networks-list-item"><a href="#" class=" social-networks-list-item__link icon-linkedin"></a></li>
+						<li class="social-networks-list-item"><a href="#" class=" social-networks-list-item__link icon-skype"></a></li>
+						
+					</ul>
+				</div>
+			</div>
+
+			
+			<nav class="main-nav clearfix">
+				<ul class="menu">
+					<li class="menu-item menu-item--current">
+						<a class="menu-item__link" href="#">home</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-item__link" href="#">features</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-item__link" href="#">services</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-item__link" href="#">news</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-item__link" href="#">shop</a>
+					</li>
+				</ul>
+				<form class="search-form" action="#">
+					<input type="text" class="search-form__field" placeholder="Search...">
+					<button class="search-form__button icon-search" type="submit">&nbsp;</button> 
+				</form>				
+			</nav>
+		</div>
+	</header>
+	
+	<section class="slider">
+		<div class="wrapper">		
+			<div class="jcarousel-wrapper">
+				<div class="jcarousel">
+					<ul class="slides">
+					    <li class="slides__item">
+							<img src="dest/img/slider-img.jpg" alt=""/>			      
+					    </li>
+					    <li class="slides__item">
+					    	<img src="dest/img/slider-img1.jpg" alt=""/>
+					    </li>
+					    <li class="slides__item">
+					    	<img src="dest/img/slider-img2.jpg" alt=""/>
+					    </li>
+				 	 </ul>
+					<div class="slider-inscription">
+						<div class="slider-inscription__span slider-inscription__span--yellow">build</div>
+						<div class="slider-inscription__span">your</div>
+						<div class="slider-inscription__span">business</div>
+					</div>
+				  </div>
+				<p class="jcarousel-pagination"></p>
+					
+			</div>
+
+		</div>
+	</section>
+	
+	<section class="overall">
+		<div class="wrapper clearfix">
+			<article class="overall-article">
+				<i class="overall-article__icon icons-setting"></i>
+				<h3 class="overall-article__title">
+					<a class="overall-article__link" href="#">Power Inside</a>
+				</h3>
+				<p class="overall-article_note">
+					Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique 
+				</p>
+				<a href="#" class="overall-article__read-more">Read More<i class="overall-article__arrow"></i></a>
+			</article>
+			<article class="overall-article">
+				<i class="overall-article__icon icons-params"></i>
+				<h3 class="overall-article__title">
+					<a class="overall-article__link" href="#">New Technologies</a>
+				</h3>
+				<p class="overall-article_note">
+					Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique 
+				</p>
+				<a href="#" class="overall-article__read-more">Read More<i class="overall-article__arrow"></i></a>
+			</article>
+			<article class="overall-article">	
+				<i class="overall-article__icon icons-delivery"></i>
+				<h3 class="overall-article__title">
+					<a class="overall-article__link" href="#">Fast Support</a>
+				</h3>
+				<p class="overall-article_note">
+					Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique 
+				</p>
+				<a href="#" class="overall-article__read-more">Read More<i class="overall-article__arrow"></i></a>
+			</article>
+		</div>
+	</section>
+	
+	<section class="services">
+		<div class="wrapper">
+			<h3 class="services__head">Our Services</h3>
+			<ul class="services__list">
+				<li class="services-item">
+					<a class="services-item__link" href="#">
+						<div class="services-item__img">
+							<img class="services-item__foto" src="dest/img/service-1.jpg" alt="">
+						</div>
+						<span>Schedule Services</span>
+					</a>
+				</li>
+				<li class="services-item">
+					<a class="services-item__link" href="#">
+						<div class="services-item__img">
+							<img class="services-item__foto" src="dest/img/service-2.jpg" alt="">
+						</div>
+						<span>Preventive Maintence</span>
+					</a>
+				</li>
+				<li class="services-item">
+					<a class="services-item__link" href="#">
+						<div class="services-item__img">
+							<img class="services-item__foto" src="dest/img/service-3.jpg" alt="">
+						</div>
+						<span>Tire & Wheel Services</span>
+					</a>					
+				</li>
+				<li class="services-item">
+					<a class="services-item__link" href="#">
+						<div class="services-item__img">
+							<img class="services-item__foto" src="dest/img/service-4.jpg" alt="">
+						</div>
+						<span>Repair Services</span>
+					</a>
+				</li>			
+			</ul>
+		</div>
+	</section>
+
+	<section class="news clearfix">
+		<div class="wrapper clearfix">
+			
+			<section class="news-latest">
+				<h3 class="news-latest__head">Latest News</h3>
+				<article class="new-article clearfix">
+					<div class="new-article__img">
+						<img src="dest/img/news-img.jpg" alt="">
+						<div class="new-article__date">
+							<p class="new-article__month">Jan</p>
+							<p class="new-article__day">23</p>
+						</div>
+					</div>
+					<div class="new-article__article">
+						<header class="new-article__head">
+							<h4 class="new-article-header"><a class="new-article-header__link" href="#">Advanced Machinery Helps Improve Quality</a></h4>
+							<p class="new-article-commenter">by <a class="new-article-commenter__link"  href="#">cmsmasters</a> Comments (<a class="new-article-commenter__link" href="#">6</a>)</p>
+						</header>
+						<p>Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
+					</div>
+				</article>
+				<article class="new-article clearfix">
+					<div class="new-article__img">
+						<img src="dest/img/news-img-2.jpg" alt="">
+						<div class="new-article__date">
+							<p class="new-article__month">Jan</p>
+							<p class="new-article__day">21</p>
+						</div>
+					</div>
+					<div class="new-article__article">
+						<header class="new-article__head">
+							<h4 class="new-article-header"><a class="new-article-header__link" href="#">Powerful Techniques for Advanced Service</a></h4>
+							<p class="new-article-commenter">by <a class="new-article-commenter__link" href="#">cmsmasters</a> Comments (<a class="new-article-commenter__link" href="#">3</a>)</p>
+						</header>
+						<p>Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
+					</div>
+				</article>
+			</section>
+			
+			<section class="banners-place">
+				<h3 class="banners-place__head">Banners Place</h3>
+				<div class="accordions">
+					<div class="accordion-panel active">				
+						<a href="#" class="accordion-panel__header clearfix">
+							<div class="accordion-panel__pointer"></div>
+							<h4 class="accordion-panel__link" >accordion panel 1</h4>
+						</a>
+						<div class="accordion-body">
+							<p class="accordion-body__article">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur </p>
+						</div>
+					</div>
+					<div class="accordion-panel">
+						<a href="#" class="accordion-panel__header clearfix">
+							<div class="accordion-panel__pointer"></div>
+							<h4 class="accordion-panel__link" >accordion panel 2</h4>
+						</a>
+						<div class="accordion-body">
+							<p class="accordion-body__article">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur </p>
+						</div>
+					</div>
+					<div class="accordion-panel">
+						<a href="#" class="accordion-panel__header clearfix">
+							<div class="accordion-panel__pointer"></div>
+							<h4 class="accordion-panel__link" >accordion panel 3</h4>
+						</a>
+						<div class="accordion-body">
+							<p class="accordion-body__article">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur </p>
+						</div>
+					</div>
+					<div class="accordion-panel">
+						<a href="#" class="accordion-panel__header clearfix">
+							<div class="accordion-panel__pointer"></div>
+							<h4 class="accordion-panel__link" >accordion panel 4</h4>
+						</a>
+						<div class="accordion-body">
+							<p class="accordion-body__article">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur </p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+	
+	<section>
+		<div class="wrapper">
+			<ul class="sponsors">
+				<li class="sponsors__item rbp-wheels"><a href="#" class="sponsors__link icons-rbp-wheels"></a></li>
+				<li class="sponsors__item moto-metal"><a href="#" class="sponsors__link icons-moto-metal"></a></li>
+				<li class="sponsors__item crave"><a href="#" class="sponsors__link icons-crave"></a></li>
+				<li class="sponsors__item atx-series"><a href="#" class="sponsors__link icons-atx-series"></a></li>
+				<li class="sponsors__item cruiser-alloy"><a href="#" class="sponsors__link icons-cruiser-alloy"></a></li>
+				<li class="sponsors__item gear"><a href="#" class="sponsors__link icons-gear"></a></li>
+			</ul>
+		</div>
+	</section>
+	
+	<footer class="footer">
+		<div class="wrapper clearfix">
+			<div class="footer-menu">
+				<h4 class="footer-menu__header">Socials</h4>
+				<ul class="footer-menu__list">
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Facebook</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Flickr</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Twitter</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Vimeo</a></li>
+				</ul>
+			</div>
+			<div class="footer-menu">
+				<h4 class="footer-menu__header">Links</h4>
+				<ul class="footer-menu__list">
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">How to Write a Blog</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Create a Blog in 4 Steps</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">15 Tips to Increase Traffic</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">20 Blog Post Ideas</a></li>
+				</ul>
+			</div>
+			<div class="footer-menu">
+				<h4 class="footer-menu__header">Blogroll</h4>
+				<ul class="footer-menu__list">
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Blogs Blog</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Roll Up Roll Up</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Blog Free</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Wordpress Blog</a></li>
+				</ul>
+			</div>
+			<div class="footer-menu">
+				<h4 class="footer-menu__header">About us</h4>
+				<ul class="footer-menu__list">
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Agriculture</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Harvest</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Company news</a></li>
+					<li class="footer-menu__item"><a class="footer-menu__link" href="#">Investor relations</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="wrapper clearfix">
+				<p class="footer-bottom__info icon-location">BuildHomeLtd.  Street Name  123   23 45 Cityname</p>
+				<p class="footer-bottom__info icon-mobile">+123 900 123 456</p>
+				<p class="footer-bottom__info icon-vcard">info@buildhome.web</p>
+				<p class="footer-bottom__info icon-copyright copyright">2014 Build Home</p>
+			</div>			
+		</div>
+	</footer>
+
+	
+
+</body>
+</html>

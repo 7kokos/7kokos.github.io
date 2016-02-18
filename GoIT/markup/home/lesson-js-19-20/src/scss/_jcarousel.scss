@@ -1,0 +1,57 @@
+/** Carousel **/
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+}
+
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slides__item {
+    float: left;
+}
+
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: 5%;
+    left: 47%;
+}
+
+.jcarousel-pagination a {
+    display: inline-block;
+    margin-right: 15px;
+    width: 15px;
+  height: 15px;
+  background: #fff;
+  cursor: pointer;
+  border: 3px solid #fff;
+  text-indent: -9999px;
+  box-sizing: border-box;
+}
+
+.jcarousel-pagination a.active {
+    background: #001d1d;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+
+
+
+
+
+
