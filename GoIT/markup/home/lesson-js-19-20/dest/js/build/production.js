@@ -21,7 +21,9 @@
             .on('jcarouselpagination:inactive', 'a', function() {
                 $(this).removeClass('active');
             })
-            .jcarouselPagination();
+            .jcarouselPagination({
+            'perPage': 1
+            });
     });
 
     
