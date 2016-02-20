@@ -21,8 +21,7 @@
             .on('jcarouselpagination:inactive', 'a', function() {
                 $(this).removeClass('active');
             })
-            .jcarouselPagination({
-            	'perPage': 1});
+            .jcarouselPagination();
     });
 
     
@@ -332,12 +331,46 @@ var data = [
   }
 ];
 
+console.log('data JSON', data);
+console.log('----------------------------------------------------------------');
+
+// П.1
 
 var skills = _.map(data,'skills');
-console.log('skills', skills);
 
 var skillsFlatten = _.flattenDeep(skills);
 
-var skillsUniq = _.sortBy(_.uniq(skillsFlatten));
+var skillsUniqSort = _.sortBy(_.map(_.uniq(skillsFlatten), _.toLower));
 
-console.log('skillsUniq',skillsUniq);
+console.log('----------------------------------------------------------------');
+console.log('Массив скиллов (поле skills) всех людей, не должно быть повторяющихся скиллов, так же они должны быть отсортированы по алфавиту')
+console.log(skillsUniqSort);
+console.log('----------------------------------------------------------------');
+
+// П.2
+
+
+var man = _.map(data, function(o) {
+    return { "name": o.name, "friends": o.friends}
+  });
+var namesSort = _.map(_.sortBy(man, 'friends.length'), 'name');
+
+console.log('----------------------------------------------------------------');
+console.log('Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (friends)')
+console.log(namesSort);
+console.log('----------------------------------------------------------------');
+
+
+
+// П.3
+
+
+var friends = _.map(data, function(o) {
+  return {"name": _.map(o.friends, "name")}
+});
+var friendsSort = _.uniq(_.sortBy(_.flattenDeep(_.map(friends, 'name'))));
+
+console.log('----------------------------------------------------------------');
+console.log('Массив всех друзей всех пользователей, не должно быть повторяющихся людей')
+console.log(friendsSort);
+console.log('----------------------------------------------------------------');
