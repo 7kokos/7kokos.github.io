@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HW-13-14-js</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/tmpl.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<div class="form-group container">
+		<h2 class="text-center">Тест по математике</h2>
+		<form>
+			<div class="questions"></div>
+			<div class="submit">
+				<button type="submit" class="btn btn-md btn-default check">Проверить мои результаты</button>
+				<button type="reset" class="btn btn-md btn-default reset">Сбросить ответы</button>
+			</div>
+		</form>
+	</div>
+
+	<script type="text/html" id = "questionsGenerate">
+		<% for (var i =0; i<data.length; i++) { %>
+		<div class="box<%=i%>">
+			<h4><%=data[i].question%></h4>
+				<% for (var k =0; k<data[i].answer.length; k++) { %>
+				<div class="checkbox col-lg-12">
+			    	<label><input type="checkbox"><%=data[i].answer[k]%></label>	
+				</div>
+	<%}; %></div>
+		
+	<%}; %></script>
+
+</body>
+</html>
