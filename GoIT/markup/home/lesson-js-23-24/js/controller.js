@@ -1,6 +1,5 @@
 define(
-	'controller', 
-	['model', 'view'],
+	'controller', ['model', 'view'],
 	function() {
 		function Controller(model, view) {
 			var self = this;
@@ -32,14 +31,16 @@ define(
 						view.renderList(model.data);
 					};
 				});
-			});
-
-			$('body').on('click', function() {
-				$('.todo-list__input').removeClass('active').attr({
-					'disabled': true
+				$(this).parent().mouseleave(function(event) {
+					
+					$('body').one('click', function() {
+						$('.todo-list__input').removeClass('active').attr({
+							'disabled': true
+						});
+					});
 				});
-
 			});
+
 
 			function addItem() {
 				var newItem = view.elements.input.val();
