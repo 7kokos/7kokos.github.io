@@ -1,0 +1,22 @@
+{
+  "name": "hw19-20",
+  "version": "1.0.0",
+  "description": "hw-19-20-js",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED"
+}

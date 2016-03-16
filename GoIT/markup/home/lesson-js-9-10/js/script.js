@@ -1,23 +1,19 @@
-
 (function($) {
     $(function() {
         $('.jcarousel').jcarousel(
 
             {
-             animation: 'slow',
-             wrap: 'circular'
-        })
+                animation: 'slow',
+                wrap: 'circular'
+            })
 
         .jcarouselAutoscroll({
-             interval: 3000,
-             target: '+=1',
-             autostart: true
-            });
+            interval: 3000,
+            target: '+=1',
+            autostart: true
+        });
 
 
-
-
-            
 
         $('.jcarousel-control-prev')
             .on('jcarouselcontrol:active', function() {
@@ -41,25 +37,18 @@
                 target: '+=1'
             });
 
-        $('.jcarousel-pagination')
-            .on('jcarouselpagination:active', 'a', function() {
-                $(this).addClass('active');
-            })
-            .on('jcarouselpagination:inactive', 'a', function() {
-                $(this).removeClass('active');
-            })
-            .jcarouselPagination();
-
        
+
+
     });
 
-      
+
 })(jQuery);
 
 
-$(function () {
+$(function() {
 
-var params = {
+    var params = {
         changedEl: ".lineForm select",
         visRows: 5,
         scrollArrows: true
@@ -71,15 +60,11 @@ var params = {
 
 
 
-
-
-
-
-$(function(){
+$(function() {
     $(".niceCheck").each(
-    function() {
-        changeCheckStart($(this));
-    });
+        function() {
+            changeCheckStart($(this));
+        });
 
 });
 
@@ -95,10 +80,9 @@ function changeCheck(el)
 
     var el = el,
         input = el.find("input").eq(0);
-          
-    if(el.attr("class").indexOf("niceCheckDisabled")==-1)
-    {   
-        if(!input.attr("checked")) {
+
+    if (el.attr("class").indexOf("niceCheckDisabled") == -1) {
+        if (!input.attr("checked")) {
             el.addClass("niceChecked");
             input.attr("checked", true);
         } else {
@@ -106,21 +90,18 @@ function changeCheck(el)
             input.attr("checked", false).focus();
         }
     }
-    
+
     return true;
 }
 
-function changeVisualCheck(input)
-{
-/*
-    меняем вид чекбокса при смене значения
-*/
-var wrapInput = input.parent();
-    if(!input.attr("checked")) {
+function changeVisualCheck(input) {
+    /*
+        меняем вид чекбокса при смене значения
+    */
+    var wrapInput = input.parent();
+    if (!input.attr("checked")) {
         wrapInput.removeClass("niceChecked");
-    }
-    else
-    {
+    } else {
         wrapInput.addClass("niceChecked");
     }
 }
@@ -132,72 +113,62 @@ function changeCheckStart(el)
 */
 {
 
-try
-{
-var el = el,
-    checkName = el.attr("name"),
-    checkId = el.attr("id"),
-    checkChecked = el.attr("checked"),
-    checkDisabled = el.attr("disabled"),
-    checkTab = el.attr("tabindex"),
-    checkValue = el.attr("value");
-    if(checkChecked)
-        el.after("<span class='niceCheck niceChecked'>"+
-            "<input type='checkbox'"+
-            "name='"+checkName+"'"+
-            "id='"+checkId+"'"+
-            "checked='"+checkChecked+"'"+
-            "value='"+checkValue+"'"+
-            "tabindex='"+checkTab+"' /></span>");
-    else
-        el.after("<span class='niceCheck'>"+
-            "<input type='checkbox'"+
-            "name='"+checkName+"'"+
-            "id='"+checkId+"'"+
-             "value='"+checkValue+"'"+
-            "tabindex='"+checkTab+"' /></span>");
-    
-    /* если checkbox disabled - добавляем соотвсмтвующи класс для нужного вида и добавляем атрибут disabled для вложенного chekcbox */      
-    if(checkDisabled)
-    {
-        el.next().addClass("niceCheckDisabled");
-        el.next().find("input").eq(0).attr("disabled","disabled");
+    try {
+        var el = el,
+            checkName = el.attr("name"),
+            checkId = el.attr("id"),
+            checkChecked = el.attr("checked"),
+            checkDisabled = el.attr("disabled"),
+            checkTab = el.attr("tabindex"),
+            checkValue = el.attr("value");
+        if (checkChecked)
+            el.after("<span class='niceCheck niceChecked'>" +
+                "<input type='checkbox'" +
+                "name='" + checkName + "'" +
+                "id='" + checkId + "'" +
+                "checked='" + checkChecked + "'" +
+                "value='" + checkValue + "'" +
+                "tabindex='" + checkTab + "' /></span>");
+        else
+            el.after("<span class='niceCheck'>" +
+                "<input type='checkbox'" +
+                "name='" + checkName + "'" +
+                "id='" + checkId + "'" +
+                "value='" + checkValue + "'" +
+                "tabindex='" + checkTab + "' /></span>");
+
+        /* если checkbox disabled - добавляем соотвсмтвующи класс для нужного вида и добавляем атрибут disabled для вложенного chekcbox */
+        if (checkDisabled) {
+            el.next().addClass("niceCheckDisabled");
+            el.next().find("input").eq(0).attr("disabled", "disabled");
+        }
+
+        /* цепляем обработчики стилизированным checkbox */
+        el.next().on("mousedown", function(e) {
+            changeCheck($(this))
+        });
+        el.next().find("input").eq(0).on("change", function(e) {
+            changeVisualCheck($(this))
+        });
+        if (jQuery.browser.msie) {
+            el.next().find("input").eq(0).on("click", function(e) {
+                changeVisualCheck(jQuery(this))
+            });
+        }
+        el.remove();
+    } catch (e) {
+        // если ошибка, ничего не делаем
     }
-    
-    /* цепляем обработчики стилизированным checkbox */      
-    el.next().on("mousedown", function(e) { 
-        changeCheck($(this)) 
-    });
-    el.next().find("input").eq(0).on("change", function(e) { 
-        changeVisualCheck($(this)) 
-    });
-    if(jQuery.browser.msie)
-    {
-        el.next().find("input").eq(0).on("click", function(e) {
-         changeVisualCheck(jQuery(this)) 
-     });   
-    }
-    el.remove();
-}
-catch(e)
-{
-    // если ошибка, ничего не делаем
-}
 
     return true;
 }
 
 
 
-
-
-$(function(){
-    $('ul.menu li').hover(function(){
-         $(this).children('ul').delay(20).slideDown(200);
-         }, function(){
-         $(this).children('ul').delay(20).slideUp(200);
+$(function() {
+    $('ul.menu li').hover(function() {
+        $(this).children('ul').delay(20).slideDown(200);
+    }, function() {
+        $(this).children('ul').delay(20).slideUp(200);
     });
 });
-
-
-

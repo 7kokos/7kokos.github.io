@@ -1,0 +1,713 @@
+
+@import "_reset";
+@import "_animate";
+
+
+//colors
+$color_silver_chalice_approx: #acaaa8;
+$color_stack_approx: #8f8f8f;
+$color_mine_shaft_approx: #333333;
+$color_rangoon_green_approx: #1a1915;
+$white: #fff;
+$color_sunset_orange_approx: #ff4e50;
+$color_java_approx: #1cd7ad;
+$color_yellow_sea_approx: #ffa507;
+$color_royal_blue_approx: #4e73db;
+$color_celeste_approx: #ccc;
+$color_gallery_approx: #eee;
+$color_storm_dust_approx: #666666;
+
+//fonts
+$font_0: Roboto;
+$font_1: Montserrat;
+
+//urls
+$url_0: url(../../fonts/RobotoLight.woff2);
+$url_1: url(../../fonts/RobotoLight.woff);
+$url_2: url(../../fonts/Montserrat-Bold.woff2);
+$url_3: url(../../fonts/Montserrat-Bold.woff);
+$url_4: url(../../fonts/Montserrat-Regular.woff2);
+$url_5: url(../../fonts/Montserrat-Regular.woff);
+$url_6: url(../img/header-bg.jpg);
+$url_7: url(../img/step1.jpg);
+$url_8: url(../img/step2.jpg);
+$url_9: url(../img/step3.jpg);
+$url_10: url(../img/sprite.png);
+$url_11: url(../img/ideas_bg1.jpg);
+$url_12: url(../img/ideas_bg2.jpg);
+$url_13: url(../img/ideas_bg3.jpg);
+$url_14: url(../img/ideas_bg4.jpg);
+$url_15: url(../img/ideas_bg5.jpg);
+$url_16: url(../img/ideas_bg6.jpg);
+$url_17: url(../img/ideas_bg7.jpg);
+$url_18: url(../img/copyright.png);
+
+@charset "UTF-8";
+@font-face {
+	font-family: $font_0;
+	font-style: normal;
+	font-weight: 300;
+	src: local("Roboto Light"), local("Roboto-Light"), $url_0 format("woff2"), $url_1;
+}
+@font-face {
+	font-family: $font_1;
+	font-style: normal;
+	font-weight: bold;
+	src: local("Montserrat-Bold"), local("MontserratBold"), $url_2 format("woff2"), $url_3;
+}
+@font-face {
+	font-family: $font_1;
+	font-style: normal;
+	font-weight: normal;
+	src: local("Montserrat-Regular"), local("MontserratRegular"), $url_4 format("woff2"), $url_5;
+}
+a {
+	color: $color_stack_approx;
+	text-decoration: none;
+	&:hover {
+		color: $color_mine_shaft_approx;
+	}
+}
+.wrapper {
+	width: 940px;
+	margin: 0 auto;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.header {
+	background: $color_rangoon_green_approx $url_6 no-repeat center;
+	background-size: cover;
+	height: 700px;
+	color: $white;
+}
+.header-top {
+	height: 36px;
+	position: relative;
+	top: 38px;
+}
+.header-top__logo {
+	color: $white;
+	display: inline-block;
+	font: bold 20px/36px $font_1;
+	float: left;
+	&:active {
+		color: $color_rangoon_green_approx;
+	}
+}
+.header-top__login {
+	color: $white;
+	display: inline-block;
+	height: 36px;
+	float: right;
+	font: bold 14px/36px $font_1;
+	&:active {
+		color: $color_rangoon_green_approx;
+	}
+}
+.header-top__login--signup {
+	width: 90px;
+	height: 36px;
+	border: solid 2px $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 18px;
+	background-color: transparent;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	text-align: center;
+	margin-left: 20px;
+	line-height: 32px;
+}
+.header-middle {
+	text-align: center;
+	margin-top: 179px;
+}
+.header-middle__h1 {
+	width: 500px;
+	font: bold 52px/64px $font_1;
+	text-transform: uppercase;
+	margin: 0;
+	display: inline-block;
+}
+.header-middle__h2 {
+	font: 300 24px/36px $font_0;
+	margin: 16px 0 30px;
+}
+.header-middle__btn {
+	width: 225px;
+	height: 40px;
+	color: $white;
+	display: inline-block;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	background-color: $color_sunset_orange_approx;
+	font: bold 14px/40px $font_1;
+}
+.worksteps {
+	padding-top: 95px;
+}
+.partners {
+	padding-top: 95px;
+}
+.ideas {
+	padding-top: 95px;
+}
+.search {
+	padding-top: 76px;
+	text-align: center;
+}
+.section-header {
+	color: $color_rangoon_green_approx;
+	margin: 0 0 32px 0;
+	font: bold 22px $font_1;
+	text-align: center;
+}
+.jcarousel {
+	width: 300px;
+	height: 400px;
+	float: left;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	margin-right: 20px;
+	overflow: hidden;
+	position: relative;
+	ul {
+		width: 20000em;
+		position: relative;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		float: left;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.step-box {
+	width: 300px;
+	height: 400px;
+	margin-right: 5px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	padding: 0 20px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	color: $white;
+	background-position: center;
+}
+.step1 {
+	background-image: $url_7;
+}
+.step2 {
+	background-image: $url_8;
+}
+.step3 {
+	background-image: $url_9;
+}
+.arrows__left {
+	position: absolute;
+	top: 153px;
+	width: 30px;
+	height: 55px;
+	display: block;
+	cursor: pointer;
+	background: $url_10;
+	background-position: 0 68px;
+	left: 20px;
+	&:hover {
+		opacity: 0.8;
+	}
+	&:active {
+		opacity: 1;
+	}
+}
+.arrows__right {
+	position: absolute;
+	top: 153px;
+	width: 30px;
+	height: 55px;
+	display: block;
+	cursor: pointer;
+	background: $url_10;
+	background-position: 31px 68px;
+	right: 20px;
+	&:hover {
+		opacity: 0.8;
+	}
+	&:active {
+		opacity: 1;
+	}
+}
+.step-box__count {
+	width: 70px;
+	height: 20px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	background-color: $color_sunset_orange_approx;
+	font: 10px/21px $font_1;
+	text-transform: uppercase;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	padding: 0 14px;
+	margin-bottom: 17px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.step-box__info {
+	height: 386px;
+	display: table-cell;
+	vertical-align: bottom;
+}
+.step-box__title {
+	font: bold 24px/27px $font_1;
+}
+.step-box__desription {
+	color: $color_silver_chalice_approx;
+	display: block;
+	line-height: 17px;
+	margin-top: 10px;
+}
+.partners-block {
+	overflow: hidden;
+	margin-bottom: 35px;
+}
+.partners-box {
+	width: 220px;
+	float: left;
+	text-align: center;
+	margin-right: 20px;
+	position: relative;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.partners-box__img {
+	width: 120px;
+	height: 120px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 60px;
+	background-color: $color_rangoon_green_approx;
+	display: inline-block;
+}
+.partners-box__circle {
+	width: 40px;
+	height: 40px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	border: solid 4px $white;
+	position: absolute;
+	top: 85px;
+	right: 46px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	padding: 7px 7px 7px 8px;
+}
+.red {
+	background-color: $color_sunset_orange_approx;
+}
+.green {
+	background-color: $color_java_approx;
+}
+.yellow {
+	background-color: $color_yellow_sea_approx;
+}
+.blue {
+	background-color: $color_royal_blue_approx;
+	padding-left: 7px;
+}
+.partners-box__icon {
+	width: 16px;
+	height: 16px;
+	background: $url_10 no-repeat;
+}
+.tv {
+	background-position: 0 0;
+}
+.cup {
+	background-position: 0 -17px;
+}
+.bulb {
+	background-position: 1px -32px;
+	height: 18px;
+}
+.plane {
+	background-position: -1px -49px;
+	width: 18px;
+	height: 17px;
+}
+.partners-box__title {
+	font: bold 14px $font_1;
+	display: block;
+	color: $color_mine_shaft_approx;
+	margin-top: 14px;
+	margin-bottom: 13px;
+}
+.partners-box__description {
+	display: inline-block;
+	line-height: 16px;
+}
+.partners__btn {
+	width: 192px;
+	height: 40px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	background-color: $white;
+	border: 2px solid $color_sunset_orange_approx;
+	font: bold 14px/36px $font_1;
+	color: $color_sunset_orange_approx;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	&:active {
+		color: $color_sunset_orange_approx;
+	}
+}
+.grid-item {
+	height: 310px;
+	width: 300px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	border: 1px solid $color_celeste_approx;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	font: bold 22px $font_1;
+	color: $white;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.grid-item--width2 {
+	width: 620px;
+}
+.bg1 {
+	background-image: $url_11;
+}
+.bg2 {
+	background-image: $url_12;
+}
+.bg3 {
+	background-image: $url_13;
+}
+.bg4 {
+	background-image: $url_14;
+}
+.bg5 {
+	background-image: $url_15;
+}
+.bg6 {
+	background-image: $url_16;
+}
+.bg7 {
+	background-image: $url_17;
+}
+.grid-item__text {
+	width: inherit;
+	height: inherit;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 15px;
+}
+.search__text {
+	font-size: 18px;
+	color: $color_mine_shaft_approx;
+	margin-bottom: 40px;
+}
+.search__form {
+	display: inline-block;
+}
+.search__input {
+	width: 240px;
+	height: 40px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	background-color: $white;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px $color_gallery_approx;
+	border: solid 1px $color_celeste_approx;
+	padding: 0 15px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin-right: 7px;
+}
+.search__btn {
+	width: 160px;
+	height: 40px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	background-color: $color_sunset_orange_approx;
+	color: $white;
+	font: bold 14px $font_1;
+	padding: 0;
+	outline: none;
+	border: none;
+	&:hover {
+		color: $color_mine_shaft_approx;
+	}
+}
+.footer {
+	margin-top: 100px;
+	border-top: 4px solid $color_sunset_orange_approx;
+	padding: 36px 0 33px;
+}
+.collum {
+	float: left;
+	width: 80px;
+	margin-right: 80px;
+}
+.collum--big {
+	width: 140px;
+	margin-right: 100px;
+}
+.collum__sitelogo {
+	color: $color_sunset_orange_approx;
+	font: bold 16px $font_1;
+}
+.collum__title {
+	display: block;
+	margin-bottom: 10px;
+	color: $color_mine_shaft_approx;
+	font: bold 14px $font_1;
+}
+.collum__link {
+	display: block;
+	color: $color_storm_dust_approx;
+	margin-bottom: 4px;
+}
+.collum__img {
+	display: block;
+	background: $url_18;
+	width: 110px;
+	height: 24px;
+	float: right;
+	margin-top: 7px;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: background-position 0.2s ease-in;
+	&:active {
+		opacity: 0.5;
+	}
+}
+.collum--copyright {
+	width: 140px;
+	float: right;
+	text-align: right;
+	position: relative;
+	top: -6px;
+	margin-right: 0;
+}
+.collum__text {
+	color: $color_celeste_approx;
+	font: bold 10px $font_1;
+	text-transform: uppercase;
+}
+@media only screen and(max-width:939px) {
+	.wrapper {
+		width: 748px;
+	}
+	.wrapper--header {
+		padding: 0 40px;
+	}
+	.wrapper--footer {
+		padding: 0 30px;
+	}
+	.jcarousel {
+		width: 236px;
+	}
+	.step-box {
+		width: 236px;
+	}
+	.arrows__left {
+		top: 40px;
+	}
+	.arrows__right {
+		top: 40px;
+	}
+	.step-box__info {
+		height: 382px;
+	}
+	.partners-block {
+		text-align: center;
+		margin-bottom: -20px;
+	}
+	.partners-box {
+		display: inline-block;
+		vertical-align: top;
+		float: none;
+		margin: 0 20px 55px;
+	}
+	.grid-item {
+		width: 236px;
+	}
+	.grid-item--width2 {
+		width: 492px;
+	}
+	.collum--big {
+		margin-right: 84px;
+	}
+}
+@media only screen and(max-width:747px) {
+	.wrapper {
+		width: 300px;
+	}
+	.header {
+		height: 540px;
+	}
+	.wrapper--header {
+		padding: 0 10px;
+	}
+	.header-top {
+		text-align: center;
+		top: 30px;
+	}
+	.header-top__logo {
+		position: absolute;
+		top: 139px;
+	}
+	.header-top__login {
+		float: none;
+		position: relative;
+		left: -113px;
+	}
+	.header-middle {
+		margin-top: 190px;
+	}
+	.header-middle__btn {
+		width: 280px;
+	}
+	.partners__btn {
+		width: 280px;
+	}
+	.search__btn {
+		width: 280px;
+		margin-top: 10px;
+	}
+	.search__input {
+		width: 280px;
+		margin-right: 0;
+	}
+	.header-middle__h1 {
+		font-size: 30px;
+		line-height: 36px;
+		width: 282px;
+	}
+	.header-middle__h2 {
+		font-size: 18px;
+		line-height: 22px;
+		margin-top: 8px;
+		margin-bottom: 15px;
+	}
+	.header-top__login--signup {
+		left: 46px;
+	}
+	.worksteps {
+		padding-top: 33px;
+	}
+	.partners {
+		padding-top: 33px;
+	}
+	.ideas {
+		padding-top: 33px;
+	}
+	.search {
+		padding-top: 33px;
+	}
+	.section-header {
+		margin-bottom: 15px;
+	}
+	.jcarousel {
+		width: 300px;
+		height: 240px;
+		margin-bottom: 10px;
+		margin-right: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.step-box {
+		width: 300px;
+		height: 240px;
+	}
+	.arrows__left {
+		width: 150px;
+		height: 240px;
+		top: 0;
+		background-image: none;
+		left: 0;
+		&:active {
+			background-color: $color_silver_chalice_approx;
+			opacity: 0.3;
+		}
+	}
+	.arrows__right {
+		width: 150px;
+		height: 240px;
+		top: 0;
+		background-image: none;
+		right: 0;
+		&:active {
+			background-color: $color_silver_chalice_approx;
+			opacity: 0.3;
+		}
+	}
+	.step-box__info {
+		height: 225px;
+	}
+	.partners-block {
+		margin-bottom: 3px;
+	}
+	.partners-box {
+		margin-bottom: 23px;
+	}
+	.grid-item {
+		width: 300px;
+		height: 120px;
+	}
+	.search__text {
+		margin: 12px 0 15px;
+	}
+	.footer {
+		margin-top: 40px;
+		padding-top: 16px;
+		text-align: center;
+		padding: 16px 0;
+	}
+	.collum {
+		width: 240px;
+		float: none;
+		margin-right: 0;
+		margin-bottom: 5px;
+		display: inline-block;
+	}
+	.collum--big {
+		margin-bottom: 10px;
+	}
+	.collum__link {
+		display: inline-block;
+		margin-right: 12px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.collum__img {
+		display: inline-block;
+		float: none;
+	}
+	.collum--copyright {
+		display: inline-block;
+		float: none;
+		text-align: center;
+		margin-top: 10px;
+	}
+	.collum__text {
+		display: block;
+	}
+	.collum__title {
+		margin-bottom: 0;
+	}
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
