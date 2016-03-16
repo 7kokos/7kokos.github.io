@@ -1608,7 +1608,7 @@ c(d.prototype,b.prototype),d.prototype._getElementOffset=e,d.prototype.layout=f,
 					console.log(data);
 					var piclist = tmpl($('#piclist-template').html(), data);
 
-					// $('.grid').remove();
+					$('.grid').remove();
 
 					$('.ideas .wrapper').append(piclist);
 					$('.grid').isotope({
@@ -1633,13 +1633,13 @@ c(d.prototype,b.prototype),d.prototype._getElementOffset=e,d.prototype.layout=f,
 
 		renderList();
 
-		$('.grid').isotope({
-			itemSelector: '.grid-item',
-			layoutMode: 'masonry',
-			masonry: {
-				gutter: 20
-			}
-		});
+		// $('.grid').isotope({
+		// 	itemSelector: '.grid-item',
+		// 	layoutMode: 'masonry',
+		// 	masonry: {
+		// 		gutter: 20
+		// 	}
+		// });
 
 	});
 

@@ -49,7 +49,7 @@
 					console.log(data);
 					var piclist = tmpl($('#piclist-template').html(), data);
 
-					// $('.grid').remove();
+					$('.grid').remove();
 
 					$('.ideas .wrapper').append(piclist);
 					$('.grid').isotope({
@@ -74,13 +74,13 @@
 
 		renderList();
 
-		$('.grid').isotope({
-			itemSelector: '.grid-item',
-			layoutMode: 'masonry',
-			masonry: {
-				gutter: 20
-			}
-		});
+		// $('.grid').isotope({
+		// 	itemSelector: '.grid-item',
+		// 	layoutMode: 'masonry',
+		// 	masonry: {
+		// 		gutter: 20
+		// 	}
+		// });
 
 	});
 
