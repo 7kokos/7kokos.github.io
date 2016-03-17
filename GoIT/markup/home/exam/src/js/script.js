@@ -44,6 +44,9 @@
 		function renderList(queryPic) {
 
 			$.ajax({
+				type: "GET",
+				dataType: "json",
+				cache: false,
 				url: 'http://api.pixplorer.co.uk/image?word=' + queryPic + '&amount=7&size=tb',
 				success: function(data) {
 					console.log(data);
