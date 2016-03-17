@@ -39,48 +39,48 @@
 
 
 
-		// var queryPic = '';
+		var queryPic = '';
 
-		// function renderList(queryPic) {
+		function renderList(queryPic) {
 
-		// 	$.ajax({
-		// 		url: 'http://api.pixplorer.co.uk/image?word=' + queryPic + '&amount=7&size=tb',
-		// 		success: function(data) {
-		// 			console.log(data);
-		// 			var piclist = tmpl($('#piclist-template').html(), data);
+			$.ajax({
+				url: 'http://api.pixplorer.co.uk/image?word=' + queryPic + '&amount=7&size=tb',
+				success: function(data) {
+					console.log(data);
+					var piclist = tmpl($('#piclist-template').html(), data);
 
-		// 			$('.grid').remove();
+					$('.grid').remove();
 
-		// 			$('.ideas .wrapper').append(piclist);
-		// 			$('.grid').isotope({
-		// 				itemSelector: '.grid-item',
-		// 				layoutMode: 'masonry',
-		// 				masonry: {
-		// 					gutter: 20
-		// 				}
-		// 			});
+					$('.ideas .wrapper').append(piclist);
+					$('.grid').isotope({
+						itemSelector: '.grid-item',
+						layoutMode: 'masonry',
+						masonry: {
+							gutter: 20
+						}
+					});
 
-		// 		}
-		// 	});
-		// }
+				}
+			});
+		}
 
-		// $('#f').submit(function(e) {
+		$('#f').submit(function(e) {
 
-		// 	e.preventDefault();
-		// 	var query = encodeURIComponent($('.search__input').val());
-		// 	renderList(query);
+			e.preventDefault();
+			var query = encodeURIComponent($('.search__input').val());
+			renderList(query);
 
-		// });
-
-		// renderList();
-
-		$('.grid').isotope({
-			itemSelector: '.grid-item',
-			layoutMode: 'masonry',
-			masonry: {
-				gutter: 20
-			}
 		});
+
+		renderList();
+
+		// $('.grid').isotope({
+		// 	itemSelector: '.grid-item',
+		// 	layoutMode: 'masonry',
+		// 	masonry: {
+		// 		gutter: 20
+		// 	}
+		// });
 
 	});
 
