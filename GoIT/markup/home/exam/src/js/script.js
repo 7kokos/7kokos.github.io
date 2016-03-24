@@ -49,7 +49,7 @@
 				cache: false,
 				url: 'http://api.pixplorer.co.uk/image?word=' + queryPic + '&amount=7&size=tb',
 				success: function(data) {
-					console.log(data);
+					
 					var piclist = tmpl($('#piclist-template').html(), data);
 
 					$('.grid').remove();

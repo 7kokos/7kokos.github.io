@@ -1,7 +1,7 @@
 {
-  "name": "hw19-20",
+  "name": "exam",
   "version": "1.0.0",
-  "description": "hw-19-20-js",
+  "description": "exam-js",
   "main": "index.js",
   "dependencies": {
     "grunt": "^0.4.5"

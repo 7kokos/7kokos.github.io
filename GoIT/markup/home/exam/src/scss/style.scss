@@ -112,6 +112,10 @@ a {
 		border-radius: 20px;
 		background-color: #ff4e50;
 		font: bold 14px/40px "Montserrat";
+		transition: all 0.3s ease-in;
+			&:hover {
+				background-color: #fff;
+			}
 	}
 }
 
@@ -311,9 +315,12 @@ a {
 	text-align: center;
 	margin: 0 auto;
 	box-sizing: border-box;
-
-	&:active {
-		color: #ff4e50;
+	transition: all 0.3s ease-in;
+	// &:active {
+	// 	color: #ff4e50;
+	// }
+	&:hover {
+		background-color: #ff4e50;
 	}
 }
 .grid-item {
@@ -372,9 +379,12 @@ a {
 	padding: 0;
 	outline: none;
 	border: none;
+	transition: all 0.3s ease-in;
 
 	&:hover {
+		background-color: #fff;
 		color: #333333;
+		border: 2px solid #ff4e50;
 	}
 }
 

@@ -2352,7 +2352,10 @@ a {
     display: inline-block;
     border-radius: 20px;
     background-color: #ff4e50;
-    font: bold 14px/40px "Montserrat"; }
+    font: bold 14px/40px "Montserrat";
+    transition: all 0.3s ease-in; }
+    .header-middle__btn:hover {
+      background-color: #fff; }
 
 .worksteps, .partners, .ideas {
   padding-top: 95px; }
@@ -2545,9 +2548,10 @@ a {
   display: block;
   text-align: center;
   margin: 0 auto;
-  box-sizing: border-box; }
-  .partners__btn:active {
-    color: #ff4e50; }
+  box-sizing: border-box;
+  transition: all 0.3s ease-in; }
+  .partners__btn:hover {
+    background-color: #ff4e50; }
 
 .grid-item {
   height: 310px;
@@ -2601,9 +2605,12 @@ a {
   font: bold 14px "Montserrat";
   padding: 0;
   outline: none;
-  border: none; }
+  border: none;
+  transition: all 0.3s ease-in; }
   .search__btn:hover {
-    color: #333333; }
+    background-color: #fff;
+    color: #333333;
+    border: 2px solid #ff4e50; }
 
 .footer {
   margin-top: 100px;

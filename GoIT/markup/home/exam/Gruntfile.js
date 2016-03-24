@@ -7,12 +7,14 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
+                    'src/js/jquery-1.9.1.js',
+                    'src/js/jquery.xdomainrequest.min.js',
                     'src/js/jquery.jcarousel.js',
                     'src/js/jcarousel.basic.js',
                     'src/js/isotope.pkgd.min.js',
                     'src/js/tmpl.js',
                     'src/js/script.js',
-                     'src/js/*.js'// Все JS в папке libs
+                    'src/js/*.js'// Все JS в папке libs
                              // Конкретный файл
                 ],
                 dest: 'dest/js/build/production.js',
