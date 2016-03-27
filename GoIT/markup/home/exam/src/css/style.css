@@ -2426,13 +2426,11 @@ a {
 
 .arrows__left {
   background-position: 0 68px;
-  left: 20px;
-  /* float: left;*/ }
+  left: 20px; }
 
 .arrows__right {
   background-position: 31px 68px;
-  right: 20px;
-  /*float: right;*/ }
+  right: 20px; }
 
 .step-box__count {
   width: 70px;
@@ -2441,7 +2439,6 @@ a {
   background-color: #ff4e50;
   font: 10px/21px "Montserrat";
   text-transform: uppercase;
-  /*cursor: default;*/
   box-sizing: border-box;
   padding: 0 14px;
   margin-bottom: 17px;
@@ -2572,7 +2569,12 @@ a {
   height: inherit;
   display: table-cell;
   vertical-align: middle;
-  padding: 0 15px; }
+  padding: 0 15px;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s linear; }
+  .grid-item__text:hover {
+    cursor: pointer;
+    opacity: 0; }
 
 .search {
   text-align: center; }
@@ -2666,6 +2668,34 @@ a {
   .collum__img:active {
     opacity: 0.5; }
 
+.modalWindow {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .modalWindow__box {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+  .modalWindow__img {
+    display: inline-block;
+    zoom: 2;
+    border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    max-height: 300px; }
+
+.modalWindow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); }
+
 @media only screen and (max-width: 939px) {
   .wrapper {
     width: 748px; }
@@ -2702,7 +2732,10 @@ a {
     width: 492px; }
 
   .collum--big {
-    margin-right: 84px; } }
+    margin-right: 84px; }
+
+  .modalWindow__img {
+    zoom: 1.3; } }
 @media only screen and (max-width: 747px) {
   .wrapper {
     width: 300px; }
@@ -2842,6 +2875,9 @@ a {
   .collum__link {
     margin-right: 12px; }
     .collum__link:last-child {
-      margin-right: 0; } }
+      margin-right: 0; }
+
+  .modalWindow__img {
+    zoom: 0.6; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -113,13 +113,12 @@ a {
 		background-color: #ff4e50;
 		font: bold 14px/40px "Montserrat";
 		transition: all 0.3s ease-in;
-			&:hover {
-				background-color: #fff;
-			}
+
+		&:hover {
+			background-color: #fff;
+		}
 	}
 }
-
-
 .worksteps, .partners, .ideas {
 	padding-top: 95px;
 }
@@ -157,13 +156,13 @@ a {
 }
 .step-box {
 	width: 300px;
-	height: 400px;  
+	height: 400px;
 	margin-right: 5px;
 	border-radius: 4px;
 	padding: 0 20px;
 	box-sizing: border-box;
 	color: #fff;
-	background-position: center;  
+	background-position: center;
 }
 .step1 {
 	background-image: url(../img/step1.jpg);
@@ -193,11 +192,11 @@ a {
 }
 .arrows__left {
 	background-position: 0 68px;
-	left: 20px;  /* float: left;*/
+	left: 20px;
 }
 .arrows__right {
 	background-position: 31px 68px;
-	right: 20px;  /*float: right;*/
+	right: 20px;
 }
 .step-box__count {
 	width: 70px;
@@ -205,7 +204,7 @@ a {
 	border-radius: 10px;
 	background-color: #ff4e50;
 	font: 10px/21px "Montserrat";
-	text-transform: uppercase;  /*cursor: default;*/
+	text-transform: uppercase;
 	box-sizing: border-box;
 	padding: 0 14px;
 	margin-bottom: 17px;
@@ -316,36 +315,38 @@ a {
 	margin: 0 auto;
 	box-sizing: border-box;
 	transition: all 0.3s ease-in;
-	// &:active {
-	// 	color: #ff4e50;
-	// }
+
 	&:hover {
 		background-color: #ff4e50;
 	}
 }
 .grid-item {
-
-	
 	height: 310px;
 	width: 300px;
 	border-radius: 4px;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 	font: bold 22px "Montserrat";
-	color: #fff;  
+	color: #fff;
 	text-align: center;
-	margin-bottom: 20px;  
+	margin-bottom: 20px;
 }
 .grid-item--width2 {
-	width: 620px;  
+	width: 620px;
 }
-
 .grid-item__text {
 	width: inherit;
 	height: inherit;
 	display: table-cell;
 	vertical-align: middle;
 	padding: 0 15px;
+	background: rgba(0, 0, 0, 0.3);
+	transition: all 0.5s linear;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0;
+	}
 }
 .search {
 	text-align: center;
@@ -387,8 +388,6 @@ a {
 		border: 2px solid #ff4e50;
 	}
 }
-
-
 .footer {
 	margin-top: 100px;
 	border-top: 4px solid #ff4e50;
@@ -445,8 +444,41 @@ a {
 		opacity: 0.5;
 	}
 }
+.modalWindow {
+	// position: fixed;
+	// top: 50%;
+	// left: 50%;
+	// transform: translate(-50%, -50%);
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	display: table;
+	position: fixed;
+	top: 0;
+	left: 0;
 
-
+	&__box {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	&__img {
+		display: inline-block;
+		zoom: 2;
+		border-radius: 5px;
+		box-shadow: 0 15px 20px rgba(0, 0, 0, .22), 0 19px 60px rgba(0, 0, 0, .3);
+		max-width: 400px;
+		max-height: 300px;
+	}
+}
+.modalWindow-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
 @media only screen and (max-width:939px) {
 	.wrapper {
 		width: 748px;
@@ -463,8 +495,6 @@ a {
 	.arrows__left, .arrows__right {
 		top: 40px;
 	}
-
-	
 	.step-box__info {
 		height: 382px;
 	}
@@ -484,13 +514,13 @@ a {
 	.grid-item--width2 {
 		width: 492px;
 	}
-
 	.collum--big {
 		margin-right: 84px;
 	}
+	.modalWindow__img {
+		zoom: 1.3;
+	}
 }
-
-
 @media only screen and (max-width:747px) {
 	.wrapper {
 		width: 300px;
@@ -554,9 +584,8 @@ a {
 	}
 	.step-box {
 		width: 300px;
-		height: 240px;    
+		height: 240px;
 	}
-
 	.arrows__left, .arrows__right {
 		width: 150px;
 		height: 240px;    /*top: -40px;*/
@@ -586,7 +615,6 @@ a {
 		width: 300px;
 		height: 120px;
 	}
-
 	.search__text {
 		margin: 12px 0 15px;
 	}
@@ -636,5 +664,8 @@ a {
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+	.modalWindow__img {
+		zoom: 0.6;
 	}
 }
