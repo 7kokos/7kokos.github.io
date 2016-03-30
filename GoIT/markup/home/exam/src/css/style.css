@@ -2266,17 +2266,20 @@ a {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  src: local("Roboto Light"), local("Roboto-Light"), url(../../fonts/RobotoLight.woff2) format("woff2"), url(../../fonts/RobotoLight.woff); }
+  src: url("../../RobotoLight.eot");
+  src: local("Roboto Light"), local("Roboto-Light"), url("../../fonts/RobotoLight.woff2") format("woff2"), url("../../fonts/RobotoLight.woff"), url("../../RobotoLight.eot?#iefix") format("embedded-opentype"); }
 @font-face {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  src: local("Montserrat-Bold"), local("MontserratBold"), url(../../fonts/Montserrat-Bold.woff2) format("woff2"), url(../../fonts/Montserrat-Bold.woff); }
+  src: url("../../fonts/Montserrat-Bold.eot");
+  src: local("Montserrat-Bold"), local("MontserratBold"), url("../../fonts/Montserrat-Bold.woff2") format("woff2"), url("../../fonts/Montserrat-Bold.woff"), url("../../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"); }
 @font-face {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  src: local("Montserrat-Regular"), local("MontserratRegular"), url(../../fonts/Montserrat-Regular.woff2) format("woff2"), url(../../fonts/Montserrat-Regular.woff); }
+  src: url("../../fonts/Montserrat-Regular.eot");
+  src: local("Montserrat-Regular"), local("MontserratRegular"), url("../../fonts/Montserrat-Regular.woff2") format("woff2"), url("../../fonts/Montserrat-Regular.woff"), url("../../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"); }
 body {
   background-color: #fff;
   font: 300 14px "Roboto";
