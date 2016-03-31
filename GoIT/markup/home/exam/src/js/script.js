@@ -40,33 +40,52 @@
 
 
 		var queryPic = '';
-		var dataForModal;
+		var dataForModal = {
+			images: []
+		};
 
 		function renderList(queryPic) {
+			var index = 7;
+			for (var i = 0; i < index; i++) {
+				var f = function(i) {
 
-			$.ajax({
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				url: 'http://api.pixplorer.co.uk/image?word=' + queryPic + '&amount=7&size=s',
-				success: function(data) {
-					dataForModal = data;
-					var piclist = tmpl($('#piclist-template').html(), data);
+					$.ajax({
+						type: "GET",
+						dataType: "json",
+						cache: false,
+						url: 'http://api.pixplorer.co.uk/image?word=' + queryPic + '&amount=1&size=s',
+						success: function(data) {
 
-					$('.grid').remove();
+							dataForModal.images.push(data.images[0]);
+							
+							if (dataForModal.images.length > index) {
+								dataForModal.images.splice(0, 1);
+							}
 
-					$('.ideas .wrapper').append(piclist);
-					$('.grid').isotope({
-						itemSelector: '.grid-item',
-						layoutMode: 'masonry',
-						masonry: {
-							gutter: 20
+							if (i == (index - 1)) {
+								
+								var piclist = tmpl($('#piclist-template').html(), dataForModal);
+
+								$('.grid').remove();
+
+								$('.ideas .wrapper').append(piclist);
+								$('.grid').isotope({
+									itemSelector: '.grid-item',
+									layoutMode: 'masonry',
+									masonry: {
+										gutter: 20
+									}
+								});
+
+							}
+
 						}
 					});
 
-				}
-			});
+				}(i);
+			}
 		}
+
 
 		$('#f').submit(function(e) {
 

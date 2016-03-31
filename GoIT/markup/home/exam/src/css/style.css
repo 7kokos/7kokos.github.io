@@ -2315,14 +2315,14 @@ a {
       color: #fff;
       display: inline-block; }
     .header-top__logo {
-      font: bold 20px/36px "Montserrat";
+      font: bold 20px/36px "Montserrat", Arial, sans-serif;
       float: left; }
       .header-top__logo:active {
         color: #1a1915; }
     .header-top__login {
       height: 36px;
       float: right;
-      font: bold 14px/36px "Montserrat"; }
+      font: bold 14px/36px "Montserrat", Arial, sans-serif; }
       .header-top__login:active {
         color: #1a1915; }
       .header-top__login--signup {
@@ -2341,12 +2341,12 @@ a {
   margin-top: 179px; }
   .header-middle__h1 {
     width: 500px;
-    font: bold 52px/64px "Montserrat";
+    font: bold 52px/64px "Montserrat", Arial, sans-serif;
     text-transform: uppercase;
     margin: 0;
     display: inline-block; }
   .header-middle__h2 {
-    font: 300 24px/36px "Roboto";
+    font: 300 24px/36px "Roboto", Arial, sans-serif;
     margin: 16px 0 30px; }
   .header-middle__btn {
     width: 225px;
@@ -2355,7 +2355,7 @@ a {
     display: inline-block;
     border-radius: 20px;
     background-color: #ff4e50;
-    font: bold 14px/40px "Montserrat";
+    font: bold 14px/40px "Montserrat", Arial, sans-serif;
     transition: all 0.3s ease-in; }
     .header-middle__btn:hover {
       background-color: #fff; }
@@ -2369,7 +2369,7 @@ a {
 .section-header {
   color: #1a1915;
   margin: 0 0 32px 0;
-  font: bold 22px "Montserrat";
+  font: bold 22px "Montserrat", Arial, sans-serif;
   text-align: center; }
 
 .jcarousel {
@@ -2440,7 +2440,7 @@ a {
   height: 20px;
   border-radius: 10px;
   background-color: #ff4e50;
-  font: 10px/21px "Montserrat";
+  font: 10px/21px "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
   box-sizing: border-box;
   padding: 0 14px;
@@ -2454,7 +2454,7 @@ a {
   vertical-align: bottom; }
 
 .step-box__title {
-  font: bold 24px/27px "Montserrat"; }
+  font: bold 24px/27px "Montserrat", Arial, sans-serif; }
 
 .step-box__desription {
   color: #acaaa8;
@@ -2527,7 +2527,7 @@ a {
   height: 17px; }
 
 .partners-box__title {
-  font: bold 14px "Montserrat";
+  font: bold 14px "Montserrat", Arial, sans-serif;
   display: block;
   color: #333333;
   margin-top: 14px;
@@ -2543,7 +2543,7 @@ a {
   border-radius: 20px;
   background-color: #fff;
   border: 2px solid #ff4e50;
-  font: bold 14px/36px "Montserrat";
+  font: bold 14px/36px "Montserrat", Arial, sans-serif;
   color: #ff4e50;
   display: block;
   text-align: center;
@@ -2559,7 +2559,7 @@ a {
   border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font: bold 22px "Montserrat";
+  font: bold 22px "Montserrat", Arial, sans-serif;
   color: #fff;
   text-align: center;
   margin-bottom: 20px; }
@@ -2607,7 +2607,7 @@ a {
   border-radius: 20px;
   background-color: #ff4e50;
   color: #fff;
-  font: bold 14px "Montserrat";
+  font: bold 14px "Montserrat", Arial, sans-serif;
   padding: 0;
   outline: none;
   border: none;
@@ -2633,7 +2633,7 @@ a {
 
 .collum__sitelogo {
   color: #ff4e50;
-  font: bold 16px "Montserrat"; }
+  font: bold 16px "Montserrat", Arial, sans-serif; }
 
 .collum__title, .collum__link, .collum__img {
   display: block; }
@@ -2641,7 +2641,7 @@ a {
 .collum__title {
   margin-bottom: 10px;
   color: #333333;
-  font: bold 14px "Montserrat"; }
+  font: bold 14px "Montserrat", Arial, sans-serif; }
 
 .collum__link {
   color: #666666;
@@ -2657,7 +2657,7 @@ a {
 
 .collum__text {
   color: #cccccc;
-  font: bold 10px "Montserrat";
+  font: bold 10px "Montserrat", Arial, sans-serif;
   text-transform: uppercase; }
 
 .collum__img {
