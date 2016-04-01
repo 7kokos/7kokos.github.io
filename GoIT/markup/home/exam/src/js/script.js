@@ -63,20 +63,21 @@
 							}
 
 							if (i == (index - 1)) {
-								
-								var piclist = tmpl($('#piclist-template').html(), dataForModal);
+								setTimeout(function() {
 
-								$('.grid').remove();
+									var piclist = tmpl($('#piclist-template').html(), dataForModal);
 
-								$('.ideas .wrapper').append(piclist);
-								$('.grid').isotope({
-									itemSelector: '.grid-item',
-									layoutMode: 'masonry',
-									masonry: {
-										gutter: 20
-									}
-								});
+									$('.grid').remove();
 
+									$('.ideas .wrapper').append(piclist);
+									$('.grid').isotope({
+										itemSelector: '.grid-item',
+										layoutMode: 'masonry',
+										masonry: {
+											gutter: 20
+										}
+									});
+								}, 500);
 							}
 
 						}
